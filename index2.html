@@ -11,6 +11,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+
     <title>TPI-1 Pablo Charamello</title>
   </head>
   <body>
@@ -165,17 +166,16 @@
           <input
             id="cantidad"
             type="number"
-            id="Nombre"
             class="form-control flip-inputs"
             placeholder="Cantidad"
             aria-label="Cantidad"
           />
         </div>
-        <div class="col-6">
+        <div class="col-6 mb-3">
           <label for="categoria" class="mb-2">Categoría</label>
           <select
             id="categoria"
-            type="text"
+            type="number"
             class="form-control flip-inputs"
             placeholder="Estudiante"
             aria-label="Estudiante"
@@ -190,10 +190,25 @@
           <div class="total-div">
             <p class="total">Total a pagar $</p>
           </div>
-          <input type="text" id="total" disabled placeholder="1200" />
+          <input type="text" id="total" type="number" />
         </div>
       </div>
-      <button class="send-button btn btn-success w-100">Enviar</button>
+      <div class="w-100 buttonsDiv">
+        <button
+          class="green-button btn btn-success w-50 leftButton"
+          type="button"
+          onclick="costoTotal()"
+        >
+          Borrar
+        </button>
+        <button
+          class="green-button btn btn-success w-50"
+          type="button"
+          onclick="costoTotal()"
+        >
+          Resumen
+        </button>
+      </div>
     </section>
 
     <footer class="container-fluid p-0 mt-3 h-100">
@@ -227,6 +242,13 @@
         </div>
       </div>
     </footer>
+    <script>
+      let categoria = document.getElementById("categoria");
+      categoria.addEventListener("change", function () {
+        let selectedOption = this.options[categoria.selectedIndex];
+        console.log(selectedOption.value + ": " + selectedOption.text);
+      });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"

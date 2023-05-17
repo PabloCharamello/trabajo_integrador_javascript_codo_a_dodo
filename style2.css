@@ -388,9 +388,19 @@ u {
   text-decoration: underline dotted black !important;
 }
 
-.send-button {
+.buttonsDiv {
+  display: flex;
+}
+
+.green-button {
   background-color: #96c93e !important;
   border: 1px solid #96c93e !important;
+  height: 50px;
+  margin: 20px 0;
+}
+
+.leftButton {
+  margin-right: 10px;
 }
 
 footer {
