@@ -283,7 +283,7 @@ a {
   transform-style: preserve-3d;
 }
 .flip-inputs:hover {
-  transform: perspective(2600px) rotateY(-20deg) rotateX(3deg) translateX(3%);
+  transform: perspective(1000px) rotateY(-10deg) rotateX(3deg) translateX(3%);
   scale: 115%;
   box-shadow: 7px 5px 10px 1px rgba(64, 60, 60, 0.315);
 }
@@ -339,12 +339,19 @@ ul:hover {
   border-radius: 5px;
   border: 2px solid rgba(204, 219, 275, 255);
   width: 97% !important;
+
   margin: auto;
 }
 
 .total {
   margin: 8px 0 10px 7px;
   color: #08468a;
+  width: 110px;
+}
+
+.amount-div input {
+  width: 100% !important;
+  min-width: 40px !important;
 }
 
 #total {
