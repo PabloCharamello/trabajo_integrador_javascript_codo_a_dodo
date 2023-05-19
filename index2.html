@@ -250,6 +250,10 @@
 
       function multiplicar() {
         if(cantidad.value <= 5) {
+          botonBorrar.addEventListener("click", () => {
+          const div = document.getElementById("amountDiv");
+        div.classList.remove("error");
+        });        
           const div = document.getElementById("amountDiv");
           div.classList.add("amountDiv");
           const costoEntrada = 200  
@@ -258,10 +262,12 @@
           const categoria = parseFloat(document.getElementById("categoria").value);
           const total = (cantidad * costoEntrada) * categoria;
           document.getElementById("total").value = total;
+          
+          
         } else {
           const div = document.getElementById("amountDiv");
           div.classList.add("error");
-          document.getElementById("total").value = "La cantidad de entradas debe ser menor o igual a 5";
+          document.getElementById("total").value = "La cantidad de entradas debe ser menor o igual a 5";          
         }
           }
 
@@ -271,7 +277,7 @@
         botonBorrar.addEventListener("click", () => {
           const div = document.getElementById("amountDiv");
         div.classList.remove("error");
-        });
+        });        
       }
 
    
