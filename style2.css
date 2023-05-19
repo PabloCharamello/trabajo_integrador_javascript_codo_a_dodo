@@ -358,7 +358,6 @@ ul:hover {
   border-radius: 5px;
   border: 2px solid rgba(204, 219, 275, 255);
   width: 97% !important;
-
   margin: auto;
 }
 
@@ -375,6 +374,7 @@ ul:hover {
 .amount-div input {
   width: 100% !important;
   min-width: 40px !important;
+  background-color: transparent !important;
 }
 
 #total {
@@ -391,7 +391,7 @@ ul:hover {
 }
 
 .error {
-  color: red;
+  background-color: rgba(255, 52, 52, 0.975);
 }
 
 u {

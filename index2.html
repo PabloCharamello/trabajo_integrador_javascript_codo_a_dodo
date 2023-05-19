@@ -188,13 +188,12 @@
             <option value="0.85">Junior</option>
           </select>
         </div>
-        <div class="amount-div my-3 d-flex align-items-center">
+        <div class="amount-div my-3 d-flex align-items-center" id="amountDiv">
           <div class="total-div">
             <p class="total">Total a pagar $</p>
           </div>
           <input id="total" disabled></p>
-        </div>
-        <p id="error"></p>
+        </div>        
       </div>
       <div class="w-100 buttonsDiv">
         <button
@@ -250,19 +249,27 @@
 
       function multiplicar() {
         if(cantidad.value <= 5) {
-
+          const div = document.getElementById("amountDiv");
+          div.classList.add("amountDiv");
           const costoEntrada = 200  
           const cantidad = parseFloat(document.getElementById("cantidad").value);
+          console.log(cantidad);
           const categoria = parseFloat(document.getElementById("categoria").value);
           const total = (cantidad * costoEntrada) * categoria;
           document.getElementById("total").value = total;
         } else {
+          const div = document.getElementById("amountDiv");
+          div.classList.add("error");
           document.getElementById("total").value = "La cantidad de entradas debe ser menor o igual a 5";
         }
           }
 
       function borrar() {
-          document.getElementById("total").value = "";
+        document.getElementById("total").value = "";
+        button.addEventListener("click", () => {
+          const div = document.getElementById("amountDiv");
+        div.classList.add("amount-div");
+        });
       }
 
    
