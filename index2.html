@@ -200,6 +200,7 @@
           class="green-button btn btn-success w-50 leftButton"
           type="button"
           onclick="borrar()"
+          id="borrar"
         >
           Borrar
         </button>
@@ -266,7 +267,8 @@
 
       function borrar() {
         document.getElementById("total").value = "";
-        button.addEventListener("click", () => {
+        botonBorrar = document.getElementById("borrar")
+        botonBorrar.addEventListener("click", () => {
           const div = document.getElementById("amountDiv");
         div.classList.add("amount-div");
         });
