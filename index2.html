@@ -249,11 +249,7 @@
     <script>
 
       function multiplicar() {
-        if(cantidad.value <= 5) {
-          botonBorrar.addEventListener("click", () => {
-          const div = document.getElementById("amountDiv");
-        div.classList.remove("error");
-        });        
+        if(cantidad.value <= 5) {       
           const div = document.getElementById("amountDiv");
           div.classList.add("amountDiv");
           const costoEntrada = 200  
